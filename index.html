@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balkadia Minecraft Server</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white min-h-screen">
+
+  <header class="text-center py-10">
+    <h1 class="text-5xl font-extrabold text-yellow-400 drop-shadow-lg">🌍 Balkadia</h1>
+    <p class="text-xl mt-2 text-gray-300">SkyBlock & Survival Minecraft Server</p>
+    <p class="mt-4 text-sm text-gray-400">IP: <span id="server-ip" class="font-mono">play.balkadia.net</span></p>
+    <button onclick="copyIP()" class="mt-4 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition">
+      Kopiraj IP
+    </button>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6">
+    <section class="bg-gray-900 bg-opacity-50 rounded-xl p-6 shadow-lg mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-300">📜 Pravila servera</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-200">
+        <li>Bez cheatovanja / hackovanja.</li>
+        <li>Poštuj ostale igrače.</li>
+        <li>Bez psovanja ili vrijeđanja.</li>
+        <li>Griefing nije dozvoljen (osim ako je dozvoljeno u modu igre).</li>
+        <li>Staff ima poslednju reč u svim situacijama.</li>
+      </ul>
+    </section>
+
+    <section class="bg-gray-900 bg-opacity-50 rounded-xl p-6 shadow-lg mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-300">🛠️ Game Modes</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-gray-800 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-yellow-400">SkyBlock</h3>
+          <p class="text-gray-300 mt-2">Kreni od nule i izgradi svoju bazu na nebu! Izazovno, ali zabavno.</p>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-yellow-400">Survival</h3>
+          <p class="text-gray-300 mt-2">Klasičan Minecraft sa zaštitom parcela i shop sistemom.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-gray-500 py-6 text-sm">
+    &copy; 2025 Balkadia.net - Sva prava zadržana
+  </footer>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById('server-ip').textContent;
+      navigator.clipboard.writeText(ip);
+      alert('IP adresa je kopirana: ' + ip);
+    }
+  </script>
+
+</body>
+</html>
